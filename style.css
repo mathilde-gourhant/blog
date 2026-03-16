@@ -1,39 +1,70 @@
-/* style.css */
+/* MODERN DIGITAL STYLE - INSPIRED BY NUTRI'GUIDE */
 :root {
-    --text-color: #242424;
-    --meta-color: #6B6B6B;
-    --bg-color: #FFFFFF;
-    --link-color: #1A8917; /* Vert façon Medium */
+    --text-color: #1a1d21;      /* Noir plus profond */
+    --meta-color: #64748b;      /* Gris bleuté moderne */
+    --bg-color: #ffffff;
+    --accent-blue: #00bcd4;     /* Le bleu cyan dynamique de l'image */
+    --pale-blue: #f0fdff;       /* Fond très léger pour les blocs */
+    --link-color: #0097a7;
+    /* Fontes modernes et dynamiques */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--font-body);
     color: var(--text-color);
     background-color: var(--bg-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased; /* Rendu plus net */
 }
 
-/* Conteneur principal centré */
+/* Conteneur principal */
 .container {
-    max-width: 680px; /* Largeur idéale pour la lecture */
+    max-width: 720px; 
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 2px solid var(--pale-blue);
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.article-content h1 {
+    font-family: var(--font-impact);
+    font-size: 4rem;           /* Très grand */
+    text-transform: uppercase; /* Toujours en majuscules pour l'impact */
+    line-height: 0.9;          /* Lettres très serrées verticalement */
+    letter-spacing: -0.03em;   /* Lettres serrées horizontalement */
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    /* Petit effet de design : une barre bleue fine sous le titre */
+    position: relative;
     padding-bottom: 1rem;
-    margin-bottom: 3rem;
+}
+
+.article-content h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 8px;
+    background-color: var(--accent-blue);
 }
 
 header h1 {
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header h1 a {
@@ -44,34 +75,49 @@ header h1 a {
 nav a {
     text-decoration: none;
     color: var(--meta-color);
-    margin-left: 1rem;
-    font-size: 0.95rem;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: var(--text-color);
+    color: var(--accent-blue);
 }
 
-/* Articles sur l'accueil */
+/* Flux d'articles (Accueil) */
 .post-preview {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 2rem;
 }
 
 .post-meta {
-    font-size: 0.85rem;
-    color: var(--meta-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-blue); /* Date et catégorie en bleu */
     margin-bottom: 0.5rem;
 }
 
 .post-preview h2 {
-    font-size: 1.8rem;
-    margin: 0 0 0.5rem 0;
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif; /* Typo serif pour les titres d'articles */
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900; /* Style Impact/Bold */
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.03em;
 }
 
 .post-preview a {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 0.2s;
+}
+
+.post-preview a:hover {
+    color: var(--accent-blue);
 }
 
 .post-preview p {
@@ -80,60 +126,104 @@ nav a:hover {
     margin-top: 0;
 }
 
+/* Page Article */
+.article-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem; /* Très gros pour l'impact */
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+
+
+.article-content p {
+    font-size: 1.15rem;
+    margin-bottom: 1.8rem;
+    color: #334155;
+}
+
+/* Citations stylisées (Blockquote) */
+.article-content blockquote {
+    background-color: var(--pale-blue);
+    border-left: 6px solid var(--accent-blue);
+    padding: 2.5rem;
+    margin: 3rem 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0e7490; /* Bleu plus sombre pour le texte de citation */
+    border-radius: 0 8px 8px 0;
+}
+
+.article-content blockquote strong {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+}
+
 /* Section À propos */
 .about-section {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-top: 4rem;
+    background-color: var(--pale-blue);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-top: 5rem;
+    border: 1px solid rgba(0, 188, 212, 0.1);
 }
 
 .about-section h2 {
     margin-top: 0;
-    font-size: 1.2rem;
-}
-
-/* Page Article */
-.article-content h1 {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-}
-
-.article-content p {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent-blue);
 }
 
 footer {
     text-align: center;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #f0f0f0;
+    margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid #f1f5f9;
     color: var(--meta-color);
     font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
-/* Style pour les citations (façon Medium) */
-.article-content blockquote {
-    border-left: 3px solid var(--text-color); /* La fameuse ligne verticale gauche */
-    padding-left: 1.5rem; /* Espace entre la ligne et le texte */
-    margin: 2.5rem 0; /* Aère bien la citation par rapport au reste du texte */
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 1.5rem; /* Un texte légèrement plus grand pour accrocher l'œil */
-    font-style: italic;
-    color: var(--meta-color); /* Une couleur un peu plus douce que le texte principal */
-    line-height: 1.4;
+
+/* Uniformisation des listes */
+.article-content ul {
+    list-style: none; /* On enlève les puces noires basiques */
+    padding-left: 0;
+    margin-bottom: 2rem;
 }
 
-/* Optionnel : si vous voulez que l'auteur de la citation ressorte bien */
-.article-content blockquote strong {
+.article-content li {
+    font-size: 1.15rem; /* Exactement la même taille que tes paragraphes */
+    line-height: 1.8;   /* Un espacement généreux pour la lisibilité */
+    color: #334155;     /* La même couleur que tes paragraphes */
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* On ajoute une puce personnalisée en bleu cyan pour le dynamisme */
+.article-content li::before {
+    content: "•";
+    color: var(--accent-blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1.5rem;
+    position: absolute;
+    font-size: 1.4rem; /* La puce est un peu plus grosse pour l'aspect design */
+}
+
+/* Style spécifique pour les titres en gras dans la liste */
+.article-content li strong {
     color: var(--text-color);
-    font-style: normal;
-    font-size: 1.1rem;
-    display: block;
-    margin-top: 1rem;
+    font-weight: 700;
 }
