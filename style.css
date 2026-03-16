@@ -101,6 +101,27 @@ nav a:hover {
     margin-bottom: 0.5rem;
 }
 
+.article-content h2 {
+    font-family: var(--font-impact);
+    color: var(--accent-blue);
+    font-size: 1.8rem;
+    font-weight: 700;           /* Plus gras pour l'impact */
+    font-style: italic;         /* Inclinaison dynamique */
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+    
+    /* On garde la petite barre à gauche, mais on l'incline aussi avec un transform */
+    border-left: 5px solid var(--accent-blue);
+    padding-left: 1rem;
+    
+    /* Optionnel : un léger décalage pour accentuer l'effet de mouvement */
+    transform: skewX(-2deg); 
+    display: inline-block; /* Nécessaire pour que le transform s'applique bien */
+}
+
 .post-preview h2 {
     font-family: var(--font-heading);
     font-size: 2.2rem;
@@ -147,15 +168,14 @@ nav a:hover {
 /* Citations stylisées (Blockquote) */
 .article-content blockquote {
     background-color: var(--pale-blue);
-    border-left: 6px solid var(--accent-blue);
-    padding: 2.5rem;
+    border-left: 8px solid var(--accent-blue);
+    padding: 2rem;
     margin: 3rem 0;
-    font-family: var(--font-heading);
+    font-family: var(--font-impact); /* On réutilise la police titre */
+    font-size: 1.15rem;
     font-style: italic;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #0e7490; /* Bleu plus sombre pour le texte de citation */
-    border-radius: 0 8px 8px 0;
+    color: #006064;
+    border-radius: 0 10px 10px 0;
 }
 
 .article-content blockquote strong {
