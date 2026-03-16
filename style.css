@@ -25,7 +25,7 @@ body {
 
 /* --- STRUCTURE --- */
 .container {
-    max-width: 720px; 
+    max-width: 850px; /* Largeur augmentée pour plus de confort */
     margin: 0 auto;
     padding: 3rem 1.5rem;
 }
@@ -159,6 +159,8 @@ nav a:hover {
     font-size: 1.15rem;
     margin-bottom: 1.8rem;
     color: #334155;
+    text-align: justify; /* Justifie le texte */
+    hyphens: auto;       /* Optionnel : aide à couper les mots longs proprement */
 }
 
 /* --- LISTES UNIFORMISÉES --- */
@@ -231,3 +233,23 @@ footer {
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
+
+
+/* --- SOUS-TITRES H3 --- */
+.article-content h3 {
+    font-family: var(--font-heading); /* Utilise Inter au lieu d'Oswald */
+    color: var(--text-color);         /* On reste sur du noir pour différencier du bleu des H2 */
+    font-size: 1.3rem;                /* Taille intermédiaire entre le texte et le H2 */
+    font-weight: 800;                 /* Très gras pour l'aspect dynamique */
+    font-style: italic;
+    letter-spacing: -0.01em;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;            /* Espace très réduit pour coller au texte */
+    line-height: 1.2;
+    
+    /* Petite touche design : un soulignement fin bleu au lieu de la barre latérale */
+    border-bottom: 2px solid var(--accent-blue);
+    display: inline-block;            /* Pour que le trait s'arrête à la fin du mot */
+    padding-right: 0.5rem;
+}
+
