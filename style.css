@@ -1,0 +1,139 @@
+/* style.css */
+:root {
+    --text-color: #242424;
+    --meta-color: #6B6B6B;
+    --bg-color: #FFFFFF;
+    --link-color: #1A8917; /* Vert façon Medium */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal centré */
+.container {
+    max-width: 680px; /* Largeur idéale pour la lecture */
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--meta-color);
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--text-color);
+}
+
+/* Articles sur l'accueil */
+.post-preview {
+    margin-bottom: 3rem;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--meta-color);
+    margin-bottom: 0.5rem;
+}
+
+.post-preview h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; /* Typo serif pour les titres d'articles */
+}
+
+.post-preview a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.post-preview p {
+    color: var(--meta-color);
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+/* Section À propos */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+}
+
+.about-section h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* Page Article */
+.article-content h1 {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.article-content p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+    color: var(--meta-color);
+    font-size: 0.85rem;
+}
+
+/* Style pour les citations (façon Medium) */
+.article-content blockquote {
+    border-left: 3px solid var(--text-color); /* La fameuse ligne verticale gauche */
+    padding-left: 1.5rem; /* Espace entre la ligne et le texte */
+    margin: 2.5rem 0; /* Aère bien la citation par rapport au reste du texte */
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.5rem; /* Un texte légèrement plus grand pour accrocher l'œil */
+    font-style: italic;
+    color: var(--meta-color); /* Une couleur un peu plus douce que le texte principal */
+    line-height: 1.4;
+}
+
+/* Optionnel : si vous voulez que l'auteur de la citation ressorte bien */
+.article-content blockquote strong {
+    color: var(--text-color);
+    font-style: normal;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 1rem;
+}
