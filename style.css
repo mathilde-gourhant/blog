@@ -177,6 +177,9 @@ nav a:hover {
     margin-bottom: 1.2rem;
     position: relative;
     padding-left: 1.5rem;
+
+    text-align: justify;
+    hyphens: auto;
 }
 
 .article-content li::before {
@@ -185,6 +188,7 @@ nav a:hover {
     font-weight: bold;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .article-content li strong {
