@@ -257,3 +257,123 @@ footer {
     padding-right: 0.5rem;
 }
 
+
+
+/* --- STYLE NEWSLETTER --- */
+.newsletter-box {
+    background-color: var(--text-color); /* Fond sombre pour trancher */
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-box h3 {
+    font-family: var(--font-impact);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+    border: none; /* On enlève la bordure du h3 par défaut */
+}
+
+.newsletter-box p {
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--font-body);
+}
+
+.newsletter-form button {
+    background-color: var(--accent-blue);
+    color: var(--text-color);
+    border: none;
+    padding: 0 2rem;
+    border-radius: 8px;
+    font-family: var(--font-impact);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.newsletter-form button:hover {
+    background-color: #00e5ff;
+    transform: scale(1.05);
+}
+
+/* --- AJUSTEMENT SECTION À PROPOS AVEC PHOTO --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Photo ronde */
+    object-fit: cover;
+    border: 4px solid var(--accent-blue);
+    flex-shrink: 0;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+    .about-container, .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form button {
+        padding: 1rem;
+    }
+}
+
+
+/* Style pour l'icône LinkedIn discrète */
+.linkedin-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    vertical-align: middle;
+}
+
+.linkedin-icon svg {
+    width: 20px; /* Taille discrète */
+    height: 20px;
+    fill: var(--meta-color); /* Couleur grise par défaut comme ton nav */
+    transition: fill 0.2s ease;
+}
+
+.linkedin-icon:hover svg {
+    fill: #0077b5; /* Bleu LinkedIn au survol */
+}
+
+.linkedin-icon:hover {
+    transform: translateY(-2px); /* Petit effet de levier au survol */
+}
+
+/* Ajustement pour le mobile */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row; /* Garde l'alignement horizontal même sur petit écran */
+    }
+}
