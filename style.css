@@ -36,7 +36,7 @@ header {
     align-items: center;
     border-bottom: 2px solid var(--pale-blue);
     padding-bottom: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 header h1 {
@@ -68,9 +68,9 @@ nav a:hover {
 
 /* --- PAGE ACCUEIL (PREVIEWS) --- */
 .post-preview {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem; /* Réduit de 4rem à 2rem */
     border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem; /* Un peu moins d'espace sous le trait */
     transition: transform 0.3s ease;
 }
 
@@ -376,4 +376,16 @@ footer {
     header {
         flex-direction: row; /* Garde l'alignement horizontal même sur petit écran */
     }
+}
+
+.format-flash {
+    background-color: var(--pale-blue); /* Rappel de ton bleu clair */
+    padding: 1.5rem;
+    border-left: 6px solid var(--accent-blue); /* Barre plus épaisse pour l'impact */
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.format-flash .post-meta::before {
+    content: "⚡️ "; /* Ajoute l'éclair via le CSS pour plus de propreté */
 }
